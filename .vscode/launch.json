@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-DreVlicDApplication<DreVlic_D>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.drevlicd.DreVlic_D.DreVlicDApplication",
+            "projectName": "DreVlic_D",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
