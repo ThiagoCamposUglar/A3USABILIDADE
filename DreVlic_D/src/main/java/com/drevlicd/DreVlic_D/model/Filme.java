@@ -32,7 +32,10 @@ public class Filme implements Serializable{
 	
     @Column(name = "quant")
 	private int quant;
-    
+
+	@Column(name = "urlImagem")
+    private String urlImagem;
+
     @Column(name = "id")
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
