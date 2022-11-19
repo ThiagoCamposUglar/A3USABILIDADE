@@ -1,9 +1,10 @@
-<div class="row">
-    <div class="card red">
-        <img class="image" src="assets/image/bombom.webp" alt="money" />
-        <h2>Nome do Produto</h2>
-        <p>Preço</p>
-        <p>Quantidade</p>
-        <button id="myBtn" class="button" style="vertical-align:middle"><span>Editar </span></button>
+<h1>Listagem de filmes</h1>
+<div class="row">    
+    <div *ngFor="let filme of filmes" class="card red">
+        <img class="image" src="{{filme.urlImagem}}" alt="money" />
+        <h2>Nome: {{filme.nome}}</h2>
+        <p>Preço: {{filme.preco}}</p>
+        <p>Quantidade {{filme.quant}}</p>
+        <button class="button" style="vertical-align:middle" routerLink="/filme/{{filme.id}}"><span>Editar </span></button>
     </div>
 </div>

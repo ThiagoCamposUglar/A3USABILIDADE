@@ -14,4 +14,20 @@ export class FilmesService {
   getFilmes(){
     return this.http.get<Filme[]>(this.baseUrl);
   }
+
+  getFilmeById(id: String){
+    return this.http.get<Filme>(`${this.baseUrl}/${id}`);
+  }
+
+  createFilme(filme: Filme){
+    return this.http.post(this.baseUrl, filme);
+  }
+
+  updateFilme(filme: Filme){
+    return this.http.put(this.baseUrl, filme);
+  }
+
+  deleteFilme(id: String){
+    return this.http.delete(`${this.baseUrl}/${id}`);
+  }
 }

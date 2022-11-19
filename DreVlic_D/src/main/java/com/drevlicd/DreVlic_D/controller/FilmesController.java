@@ -61,10 +61,7 @@ public class FilmesController {
     @CrossOrigin(origins = "http://localhost:4200/")
     @PutMapping("/filmes")
     public ResponseEntity<Object> compraFilme(@RequestBody Filme filme) {
-        Optional<Filme> filmes = repository.findById(filme.getId());
-        Filme fmdb = filmes.get();
-        fmdb.setQuant(filme.getQuant());
-        repository.save(fmdb);
+        repository.save(filme);
         return new ResponseEntity<>(HttpStatus.OK);
     }
 }
