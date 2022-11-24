@@ -1,7 +1,7 @@
 <h1>Listagem de filmes</h1>
 <div class="row">    
     <div *ngFor="let filme of filmes" class="card red">
-        <img class="image" src="{{filme.urlImagem}}" alt="money" />
+        <img class="image" src="{{filme.urlImagem}}" alt="{{filme.nome}}" />
         <h2>{{filme.nome}}</h2>
         <p>Preço: {{filme.preco}}</p>
         <p>Quantidade {{filme.quant}}</p>

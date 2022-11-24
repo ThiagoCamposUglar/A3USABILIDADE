@@ -54,6 +54,10 @@ export class FilmeEditComponent implements OnInit {
   }
 
   createFilme(){
+    if(!this.form.valid){
+      window.alert("Dados Inválidos! Todos os campos são obrigatórios!");
+      return;
+    }
     let filme = this.form.getRawValue() as Filme;
     this.filmesService.createFilme(filme).subscribe({
       next: response => {
@@ -65,6 +69,10 @@ export class FilmeEditComponent implements OnInit {
   }
 
   updateFilme(){
+    if(!this.form.valid){
+      window.alert("Dados Inválidos! Todos os campos são obrigatórios!");
+      return;
+    }
     let filme = this.form.getRawValue() as Filme;
     this.filmesService.updateFilme(filme).subscribe({
       next: response => {
