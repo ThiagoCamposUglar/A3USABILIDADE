@@ -2,7 +2,7 @@
 <div class="row">    
     <div *ngFor="let filme of filmes" class="card red">
         <img class="image" src="{{filme.urlImagem}}" alt="money" />
-        <h2>Nome: {{filme.nome}}</h2>
+        <h2>{{filme.nome}}</h2>
         <p>Preço: {{filme.preco}}</p>
         <p>Quantidade {{filme.quant}}</p>
         <button class="button" style="vertical-align:middle" routerLink="/filme/{{filme.id}}"><span>Editar </span></button>

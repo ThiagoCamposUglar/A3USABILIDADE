@@ -32,10 +32,10 @@ export class FilmeEditComponent implements OnInit {
   private createForm() {
     this.form = this.formBuilder.group({
       id: [undefined],
-      nome: [''],
-      preco: [undefined],
-      quant: [undefined],
-      urlImagem: [undefined]
+      nome: ['', Validators.required],
+      preco: [undefined, Validators.required],
+      quant: [undefined, Validators.required],
+      urlImagem: [undefined, Validators.required]
     });
   }
 

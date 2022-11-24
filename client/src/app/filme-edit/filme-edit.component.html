@@ -12,7 +12,7 @@
             </div>
             <div class="campo">
                 <label for="">Quantidade: </label>
-                <input type="number" min="0" formControlName="quant">
+                <input type="number" min="0" max="10000" onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))" formControlName="quant">
             </div>
             <div class="campo">
                 <label for="">Url da imagem: </label>
@@ -20,8 +20,8 @@
             </div>
             <div class="butons">
                 <button class="btn" routerLink="">Retornar</button>
-                <button class="btn" *ngIf="!filme" (click)="createFilme()">Criar</button>
-                <button class="btn" *ngIf="filme" (click)="updateFilme()">Alterar</button>
+                <button class="btn" *ngIf="!filme" type="submit" (click)="createFilme()">Criar</button>
+                <button class="btn" *ngIf="filme" type="submit" (click)="updateFilme()">Alterar</button>
                 <button class="btn" *ngIf="filme" (click)="deleteFilme()">Excluir</button>
             </div>
         </div>
